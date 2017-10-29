@@ -128,7 +128,7 @@ html {
 }
 
 body {
-    background: no-repeat 30% 50% fixed url(../img/blue-cosmos.jpg);
+    background: no-repeat 60% 50%/ cover fixed url(../img/blue-cosmos.jpg);
 }
 
 ul {
