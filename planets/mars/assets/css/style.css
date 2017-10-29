@@ -128,7 +128,7 @@ html {
 }
 
 body {
-    background: no-repeat 50% 50%/ 100% 100% fixed url(../img/blue-cosmos.jpg);
+   background: no-repeat 30% 50% fixed url(../img/blue-cosmos.jpg);
 }
 
 ul {
@@ -309,7 +309,7 @@ a {
     box-sizing: border-box;
     -webkit-box-shadow: 0 0 3rem white;
     box-shadow: 0 0 3rem white;
-
+    overflow:hidden;
 }
 
 
