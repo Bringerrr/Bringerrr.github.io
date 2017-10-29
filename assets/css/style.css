@@ -154,12 +154,12 @@ a {
 
 /*--------------------------------header-------------------------------*/
 
-/*.header__dimka-body {*/
-/*    position: absolute;*/
-/*    width: 100%;*/
-/*    background: rgba(35, 0, 35, 0.3);*/
-/*    z-index: -999;*/
-/*}*/
+.dimka-body {
+    position: absolute;
+    width: 100%;
+    background: rgba(35, 0, 35, 0.3);
+    z-index: -999;
+}
 
 .header {
     width: 100%;
@@ -374,7 +374,7 @@ a {
 }
 
 .universe-birth__text_place {
-    top: 60%;
+    top: 40%;
     left: 10%;
 }
 

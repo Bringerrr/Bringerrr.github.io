@@ -66,6 +66,7 @@
     .renaissance-scientist__img {
         width: 28vw;
     }
+    
     .modern-scientist__img {
         width: 42.2vw;
     }
@@ -75,13 +76,13 @@
     }
 
     .planets__img_mars {
-        background: no-repeat url(../img/mars.jpg) 50% 50%/ auto 136%;
+        background: no-repeat url(../img/mars.jpg) 50% 50%/ auto 145%;
     }
 
 
     .container-form {
         position: relative;
-        min-height: 68vw;
+        min-height: 47vw;
     }
 
     .form-table {
