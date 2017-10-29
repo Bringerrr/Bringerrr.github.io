@@ -128,7 +128,7 @@ html {
 }
 
 body {
-     background: no-repeat 60% 50%/ cover fixed url(../img/blue-cosmos.jpg);
+     background: url(../img/black.png);
 }
 
 ul {
@@ -154,12 +154,12 @@ a {
 
 /*--------------------------------header-------------------------------*/
 
-.dimka-body {
-    position: absolute;
-    width: 100%;
-    background: rgba(35, 0, 35, 0.3);
-    z-index: -999;
-}
+/*.dimka-body {*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    background: rgba(35, 0, 35, 0.3);*/
+/*    z-index: -999;*/
+/*}*/
 
 .header {
     width: 100%;
@@ -185,8 +185,6 @@ a {
     justify-content: center;
     margin-bottom: 3vw;
 }
-
-
 
 /*---------------------header>navigation-------------------------*/
 
