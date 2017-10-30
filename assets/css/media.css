@@ -11,6 +11,9 @@
     .modern-scientist__img {
         width: 33.5vw;
     }
+    
+     .place-for-mail {
+    height: 15rem;}
 }
 
 
@@ -27,6 +30,9 @@
     .form-table {
         min-height: 36vw;
     }
+    
+     .place-for-mail {
+    height: 17rem;}
 }
 
 
@@ -37,11 +43,11 @@
     }
     /*form*/
     .container-form {
-        min-height: 52vw;
+        min-height: 42vw;
     }
 
     .form-table {
-        min-height: 32vw;
+        min-height: 42vw;
     }
 }
 
@@ -80,6 +86,9 @@
     .form-table {
         min-height: 43vw;
     }
+    
+     .place-for-mail {
+    height: 14rem;}
 }
 
 
@@ -161,6 +170,9 @@
     .form-table {
         min-height: 50vw;
     }
+    
+     .place-for-mail {
+    height: 14rem;}
 }
 
 @media screen and (min-width:480px) and (max-width:640px) {
@@ -272,6 +284,9 @@
     .form-table {
         min-height: 66vw;
     }
+    
+     .place-for-mail {
+    height: 14rem;}
 }
 
 
@@ -486,4 +501,7 @@
     .form-table {
         min-height: 76vw;
     }
+    
+    .place-for-mail {
+    height: 14rem;}
 }
