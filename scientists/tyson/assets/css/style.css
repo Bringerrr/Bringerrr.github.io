@@ -702,14 +702,14 @@ a {
 }
 
 
-.tyson-awarts-list {
+.tyson-awards-list {
     margin-left: 1.5rem;
-    text-indent: 3.5rem;
+    text-indent: 5rem;
 }
 
-.tyson-awarts-list__elem {
+.tyson-awards-list__elem {
     list-style-type: disc;
-    text-indent: 3.5rem;
+    text-indent: 5rem;
     margin-top: 1vw;
 }
 

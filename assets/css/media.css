@@ -30,7 +30,7 @@
 }
 
 
-@media screen and (min-width:960px) and (max-width:1440px) {
+@media screen and (min-width:980px) and (max-width:1440px) {
 
     #wrapper {
         width: 84%
@@ -54,14 +54,6 @@
         width: 90%
     }
 
-    .universe-birth__text_place {
-        top: 50%;
-        left: 10%;
-    }
-    .science__text_place {
-        top: 35%;
-        left: 10%;
-    }
 
     .renaissance-scientist__img {
         width: 28vw;
@@ -146,14 +138,6 @@
         margin: 0 1vw;
     }
 
-    .universe-birth__text_place {
-        top: 40%;
-        left: 10%;
-    }
-    .science__text_place {
-        top: 25%;
-        left: 10%;
-    }
 
     .renaissance-scientist__img {
         width: 29.7vw;
@@ -232,17 +216,6 @@
         height: 3.1vw;
         margin: 0 1vw;
     }
-
-    .universe-birth__text_place {
-        top: 50%;
-        left: 10%;
-    }
-    .science__text_place {
-        top: 35%;
-        left: 10%;
-    }
-
-
 
     .renaissance-scientist__img {
         width: 30.5vw;
@@ -369,13 +342,6 @@
         margin-bottom: 4vw
     }
 
-    .universe-birth__text_place {
-        top: 50%;
-        left: 10%;
-    }
-
-
-
 
     .science {
         width: 75%;
@@ -383,12 +349,6 @@
         clear: both;
         left: 12.5%;
     }
-
-    .science__text_place {
-        top: 15%;
-        left: 10%;
-    }
-
 
     .science>div:after {
 
