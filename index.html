@@ -2,244 +2,549 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1" />
-    <title>Space Odyssey</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/icons.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/slider-style.css" />
-    <link rel="stylesheet" href="assets/css/media.css" />
-<!--     <link rel="stylesheet" href="assets/css/loader.css"> -->
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="mainField.js"></script>
+    <script src="ui.js"></script>
+    <script src="bird.js"></script>
+    <script src="pipe.js"></script>
+    <script src="score.js"></script>
+    <script src="bg.js"></script>
+    <title>Document</title>
 </head>
-
-
 
 <body>
 
-        <header class="header">
-            <div class="logo">
-                <img class="logo__img" src="assets/img/spacelogo1.png" title="Логотип сайта" alt="logo"/>
-            </div>
-            <div class="header__menu">
-                <div class="navigation">
-                    <ul>
-                        <li><a href="#" class="link icon-home">Главная</a>
-                        </li>
-                        <li><a href="#history" class="link icon-history">История</a>
-                            <ul>
-                                <li><a href="history/bigbang-page-1/index.html" class="link">Большой взрыв</a></li>
-                                <li><a href="history/renisans-page-1/index.html" class="link">Ренессанс</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#scientists" class="link icon-atom">Ученые</a>
-                            <ul>
-                                <li><a href="scientists/copernic/index.html" class="link">Коперник</a></li>
-                                <li><a href="scientists/bruno/index.html" class="link">Бруно</a></li>
-                                <li><a href="scientists/galilei/index.html" class="link">Галилей</a></li>
-                                <li><a href="scientists/tyson/index.html" class="link">Тайсон</a></li>
-                                <li><a href="scientists/hawking/index.html" class="link">Хокинг</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#planets" class="link icon-globe">Планеты</a>
-                            <ul>
-                                <li><a href="planets/jupiter/index.html" class="link">Юпитер</a></li>
-                                <li><a href="planets/mars/index.html" class="link">Марс</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="art/index.html" class="link icon-picture-o">Искусство</a></li>
-                        <li><a href="#news" class="link icon-news">Новости</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <div class="slider">
-            <input type="radio" name="switch" id="btn1" checked="checked"/>
-            <input type="radio" name="switch" id="btn2"/>
-            <input type="radio" name="switch" id="btn3"/>
-            <div class="switch">
-                <label for="btn1"></label>
-                <label for="btn2"></label>
-                <label for="btn3"></label>
-            </div>
-            <div class="slider-inner">
-                <div class="slides">
-                    <div>
-                        <article class="intro-1">Узнайте
-                            <br/> на сколько велик космос</article> <img src="assets/img/space-1.jpg" title="Космос" alt="intro-1" /></div>
-                    <div>
-                        <article class="intro-2"><a href="scientists/tyson/index.html#thought">Мысль <br/> которая не даст <br/>  Вам сегодня уснуть <br/> <em> Читать дальше&hellip; </em> </a> </article><img src="assets/img/intro-2.jpg" title="Нил Тайсон" alt="intro-2" /></div>
-                    <div>
-                        <article class="intro-3"> <a href="art/index.html"> Узнайте <br/>Когда художник впервые изобразил картину, главной темой которой стал космос <em> Читать дальше&hellip; </em>  </a></article><img src="assets/img/intro-3.jpg" title="Звездная ночь Ван Гога"
-                            alt="intro-3" /></div>
-                </div>
-            </div>
+    <div id="mainField">
+        <div id="UI" class="mainField_UI">
+            <h3 id="playerName"></h3>
+            <button id="startButton">Начать игру</button>
+            <button id="recordButton">Таблица рекордов</button>
+            <button id="settingButton">Настройки</button>
         </div>
-        <!----------------------------- HEader end ------------------------------------>
-        <div id="wrapper">
-            <div id="history" class="history history_vertical-space-between">
-                <a href="history/bigbang-page-1/index.html">
-                    <div class="universe-birth universe-birth_background-universe universe-birth_shadow-border  universe-birth_transition universe-birth_float-left">
-                        <div class="universe-birth__text universe-birth__text_font-theme universe-birth__text_place universe-birth__text_transition  universe-birth__text_place-around-text">Как зародилась вселенная? И как далеко назад во времени мы смогли заглянуть?
-                            <i>Читать дальше &hellip;</i>
-                        </div>
-                    </div>
-                </a>
-                <a href="history/renisans-page-1/index.html">
-                    <div class="science science_background-universe science_shadow-border science_transition science_float-left">
-                        <div class="science__text science__text_font-theme science__text_place science__text_transition science__text_place-around-text">Почему астрономия как наука развилась так поздно? И какой скачек она успела совершить начиная с эпохи Возрождения по сей день?
-                            <i>Читать дальше &hellip;</i>
-                        </div>
-                    </div>
-                </a>
-                <div class="clearboth"></div>
-            </div>
-            <!------------------------------ History end ------------------------------------>
-            <div id="scientists" class="scientists">
-                <div class="scientists__renaissance scientists__renaissance_space-between-blocks ">
-                    <div class="renaissance-scientist__header header_border header_big-letters">Ученые эпохи Возрождения
-                    </div>
-                    <div class="renaissance-scientist renaissance-scientist_horizontal-space-between renaissance-scientist_hover">
-                        <a href="scientists/copernic/index.html">
-                            <img class="renaissance-scientist__img" src="assets/img/copernic-main.jpg" alt="copernic"/>
-                            <div class="scientist__header scientist__header_font-style scientist__header_border-style scientist__header_bg-color ">Николай Коперник</div>
-                            <div class="scientist__text scientist__text_font-style">Коперник стал первым кто подтолкнул мир к краху устоявщегося на тот момент представления о космосе</div>
-                        </a>
-                    </div>
-                    <div class="renaissance-scientist renaissance-scientist_horizontal-space-between renaissance-scientist_hover">
-                        <a href="scientists/bruno/index.html">
-                            <img class="renaissance-scientist__img" src="assets/img/bruno-main.jpg" title="Джордано Бруно" alt="bruno"/>
-                            <div class="scientist__header scientist__header_font-style scientist__header_border-style scientist__header_bg-color">Джордано Бруно</div>
-                            <div class="scientist__text scientist__text_font-style">Бруно стал мучеником науки и наиболее скандальной личностью своего времени, продвигая в общество свое представление о космосе</div>
-                        </a>
-                    </div>
-                    <div class="renaissance-scientist renaissance-scientist_horizontal-space-between renaissance-scientist_hover">
-                        <a href="scientists/galilei/index.html">
-                            <img class="renaissance-scientist__img renaissance-scientist__last-img" src="assets/img/galilei-main.jpg" title="Галилео Галилей" alt="galilei"/>
-                            <div class="scientist__header scientist__header_font-style scientist__header_border-style scientist__header_bg-color">Галилео Галилей</div>
-                            <div class="scientist__text scientist__text_font-style">Галилею удалось практически обосновать учение его предшественников о космосе.</div>
-                        </a>
-                    </div>
-                    <div class="clearboth"></div>
-                </div>
-                <div class="scientists__modern scientists__modern_vertical-space-between">
-                    <div class="renaissance-scientist__header header_border header_big-letters">Современные ученые</div>
-                    <div class="scientists__modern_elem modern-scientist_horizontal-space-between modern-scientist_vertical-space-between modern-scientist_hover">
-                        <a href="scientists/tyson/index.html">
-                            <img class="modern-scientist__img" src="assets/img/tyson-main.jpg" title="Нил Тайсон" alt="tyson"/>
-                            <div class="scientist__header scientist__header_font-style scientist__header_border-style scientist__header_bg-color ">Нил Деграсс Тайсон</div>
-                            <div class="scientist__text scientist__text_font-style">Один из десяти самых влиятельных людей в науке по оценке Discover Magazine и один из ста самых влиятельных людей в мире вообще по мнению журнала Time.</div>
-                        </a>
-                    </div>
-                    <div class="scientists__modern_elem modern-scientist_horizontal-space-between modern-scientist_vertical-space-between modern-scientist_hover">
-                        <a href="scientists/hawking/index.html">
-                            <img class="modern-scientist__img" src="assets/img/hawking-main.jpg" title="Стивен Хокинг" alt="hawking"/>
-                            <div class="scientist__header scientist__header_font-style scientist__header_border-style scientist__header_bg-color ">Стивен Хокинг</div>
-                            <div class="scientist__text scientist__text_font-style"> Практически полностью парализованный Стивен Хокинг не видет преград в собственном недуге, ведет полноценную насыщенную научную работой жизнь.</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="clearboth"></div>
-            </div>
-            <!----------------------------- Scientists end ------------------------------------>
-            <div class="pre-footer">
-                <div id="planets" class="planets">
-                    <div class="planets__header header_border space-news__header_big-letters">
-                        <div class="header_big-letters">Планеты</div>
-                    </div>
-                    <div class="planets__elem planets__elem_verical-space-between planets__elem_shadow-border">
-                        <div class="planets__img planets__img_jupiter">
-                            <div class="planets__text planets__text_position"><a href="planets/jupiter/index.html">Юпитер</a></div>
-                        </div>
-                    </div>
-                    <div class="planets__elem planets__elem_verical-space-between planets__elem_shadow-border">
-                        <div class="planets__img planets__img_mars">
-                            <div class="planets__text planets__text_position"><a href="planets/mars/index.html">Марс</a></div>
-                        </div>
-                    </div>
-                </div>
-                <!----------------------------- planets end ------------------------------------>
-                <section id="news" class="space-news">
-                    <div class="space-news__header space-news__header_font-style space-news__header_text-position space-news__header_vertical-space-between">Новости</div>
-                    <div class="space-news__elem">
-                        <div class="elem__artical-name elem__artical-name_font-style">«Хаббл» открывает объект уникального класса</div>
-                        <time class="elem__date" datetime="2017-10-20T21:30">10 ноября 21:30</time>
-                    </div>
-                    <div class="space-news__elem ">
-                        <div class="elem__artical-name elem__artical-name_font-style">Ученые обнаружили семь планет земного типа в системе близлежащей звезды</div>
-                        <time class="elem__date" datetime="2017-10-20T21:30">9 ноября 21:30</time>
-                    </div>
-                    <div class="space-news__elem">
-                        <div class="elem__artical-name  elem__artical-name_font-style">Исследователи впервые наблюдают новую, экстремально редкую галактику</div>
-                        <time class="elem__date" datetime="2017-10-20T21:30">8 ноября 21:30</time>
-                    </div>
-                    <div class="space-news__elem ">
-                        <div class="elem__artical-name elem__artical-name_font-style">Астрономы собирают в единое целое первое изображение черной дыры</div>
-                        <time class="elem__date" datetime="2017-10-20T21:30">7 ноября 21:30</time>
-                    </div>
-                </section>
-            </div>
-            <div class="mail-box">
-                <div class="container-form">
-                    <form class="form" action="" method="">
-                        <div class="form__header"><span>Нашли ошибку? <br/> Хотите задать вопрос?</span></div>
-                        <div class="form-table">
-                            <div class="form-row">
-                                <div class="form-cell">
-                                    <label class="form__elem-name" for="selector">Тема</label>
-                                </div>
-                                <div class="form-cell">
-                                    <select class="form__selector selector" id="selector">
-                                        <option class="selector__elem">Задать вопрос</option>
-                                        <option class="selector__elem">Ошибка в статье</option>
-                                        <option class="selector__elem">Неисправность сайта</option>
-                                        <option class="selector__elem">Пожелания</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell">
-                                    <label class="form__elem-name" for="id_e-mail" required="">Ваш E-mail</label>
-                                </div>
-                                <div class="form-cell">
-                                    <input class="form__input" type="text" value="" name="email" id="id_e-mail" required="" oninvalid="this.setCustomValidity('Заполни меня!')" oninput="setCustomValidity('')" placeholder="example@gmail.com" />
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell">
-                                    <label class="form__elem-name" for="message">Сообщение</label>
-                                </div>
-                                <div class="form-cell">
-                                    <textarea class="form__input place-for-mail" name="message" id="message" required="" oninvalid="this.setCustomValidity('Заполни меня!')" oninput="setCustomValidity('')" placeholder="Почему Земля не плоская? Если Земля вертиться так быстро, то почемы мы не вылетаем с неё? Что будет, если она вдруг остановиться?"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form__btn">
-                            <input class="submit__btn" type="submit" value="Отправить" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!----------------------------- Pre-footer end ------------------------------------>
-        </div>
-        <!----------------------------- Wrapper end ------------------------------------>
-        <footer id="footer">
-            <div class="about-us">
-                <div class="about-us__header">Мы в</div>
-                <div class="social icon-instagram"><a href="#">Instagram</a></div>
-                <div class="social icon-facebook-square"><a href="#">Facebook</a></div>
-                <div class="social icon-youtube-square"><a href="#">Youtube</a></div>
-                <div class="social icon-twitter-square-1"><a href="#">Twitter</a></div>
-            </div>
-            <div class="copyright">
-                &copy;Копирайт
-            </div>
-        </footer>
-        <!----------------------------- Footer end ------------------------------------>
 
+        <div id="UIDifficulty" class="mainField_UI">
+            <h3>Выберете сложность</h3>
+            <button id="ezDiffButt">Легко</button>
+            <!-- <button id="normDiffButt">Средне</button> -->
+            <button id="hardDiffButt">Тяжело</button>
+
+            <button id="backButtonDiff">Назад</button>
+        </div>
+
+        <div id="UIRestart" class="mainField_UI">
+            <button id="restartButton">Переиграть</button>
+            <button id="recordButtonRestart">Таблица рекордов</button>
+        </div>
+
+        <div id="UISetting" class="mainField_UI">
+            <h3 id="playerName"></h3>
+            <button id="settingBackButt">Назад</button>
+        </div>
+
+        <div id="UIPlayerName" class="mainField_UI">
+            <label for="name">Имя:</label>
+            <input id="nameInput" type="text"  name="name" placeholder="Введите ваше имя" required />
+            <button id="acceptName">ОК</button>
+        </div>
+
+        <div id="UIRecords" class="mainField_UI">
+            <div>
+                <h3>Таблица Рекордов</h3>
+            </div>
+            <button id="backButton">Назад</button>
+        </div>
+        <div id="fps">0</div>
+    </div>
+
+ 
+
+    <script>
+
+        "use sctrict"
+
+        var RAF =
+            // находим, какой метод доступен
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            // ни один не доступен
+            // будем работать просто по таймеру
+            function (callback) { window.setTimeout(callback, 1000 / 60); };
+
+
+        // FPS тест
+        var fps = {
+            lastAnimationFrameTime: 0,
+            fpsElement: document.getElementById('fps'),
+            animate: function (now) {
+                fps.calculateFps(now);
+                RAF(fps.animate)
+            },
+            calculateFps: function (now) {
+                var fps = 1000 / (now - this.lastAnimationFrameTime);
+                this.lastAnimationFrameTime = now;
+                this.fpsElement.innerHTML = fps.toFixed(0) + ' fps';
+            },
+            start: function () {
+                RAF(fps.animate);
+            }
+        };
+
+        fps.start();
+
+        var mainField = document.getElementById("mainField");
+
+        var mainFieldNew = new Field();
+
+        mainFieldNew.update(mainField);
+        
+        var birdDiv = mainField.getElementsByClassName("bird");
+        var pipeDiv = mainField.getElementsByClassName("pipe");
+        var pipeDivBot = mainField.getElementsByClassName("pipeBot");
+        var scoreDiv = mainField.getElementsByClassName("score")
+
+        var nameInput = document.getElementById("nameInput")
+        var playerNameHeading = document.getElementById("playerName")
+        var recordButt = document.getElementById("recordButton")
+        var backButton =document.getElementById("backButton")
+        var settingButt = document.getElementById("settingButton")
+        var settingBackButt = document.getElementById("settingBackButt")
+
+        var ezDiffButt = document.getElementById("ezDiffButt")
+        var normDiffButt = document.getElementById("normDiffButt")
+        var hardDiffButt = document.getElementById("hardDiffButt")
+        var backButtonDiff = document.getElementById("backButtonDiff");
+        var recordButtonRestart = document.getElementById("recordButtonRestart")
+
+        var bgDiv = mainField.getElementsByClassName("bgg");
+
+        var startButton = document.getElementById("startButton");
+        var restartButton = document.getElementById("restartButton");
+        var acceptName = document.getElementById("acceptName");
+
+        var ui = document.getElementById("UI")
+        var uiSetting = document.getElementById("UISetting")
+        var uiRestart = document.getElementById("UIRestart")
+        var uiPlayerName = document.getElementById("UIPlayerName")
+        var uiRecords = document.getElementById("UIRecords")
+        var uiDiff = document.getElementById("UIDifficulty")
+
+        // var transPerTick = 120;
+
+        var currentPlayerName = "" 
+
+        var frame = 0;
+
+        var birdFrameNow = 0;
+        var birdFrameParams = {
+            0:[-0.3,0], 1:[24.65,0], 2:[49.5,-0.4], 3:[74.2,-1.25], 4:[99,-1.95],
+            5:[-0.3,42.65], 6:[24.59,42.65], 7:[49.4,42.65], 8:[74.3,42.75], 9:[99.1,42.65],
+            10:[-0.3,89.2], 11:[24.65,90.1], 12:[49.35,90],13:[74.3,90]
+        }
+
+        var recordBorder = [1,2,3,5,6,7,8,9,20,44,9]
+
+        var pipes = [];
+        var bgArr = [];
+
+        var height = mainField.offsetHeight
+        var width = mainField.offsetWidth
+        var vMin = mainFieldNew.vMin();
+
+        var pipenew = new Pipe();
+        var bird = new Bird();
+        var bgNew = new Bg();
+        var score = new Score();
+
+
+        var uiNew = new UI();
+        var newNewUi = new UI();
+        var uiPlayer = new UI();
+        var uiRecordBoard = new UI();
+        var uiSettingsNew = new UI();
+        var uiDiffBoard = new UI();
+
+        var uiAnimSpeed = (130+50)/60;
+        var gameIsStarted = false;
+
+        // RAF(gameMenuPlayerName);
+
+        function addClicEventListner(arr){
+            var arrayLength =  arr.length-1
+            for(var i = 0; i<=arrayLength;i++){
+                arr[i][0].addEventListener("click",arr[i][1],false)
+            }
+        };
+
+        var clickEventsList =[
+            [recordButt,showRecordBoard],
+            [settingButt,showSettingMenu],
+            [startButton,gameMenuSetDifficulty],
+            [backButtonDiff,goBackToMenuDiff],
+            [backButton,goBackToMenuRec],
+            [acceptName,acceptPlayerName],
+            [restartButton,gameRestart],
+            [ezDiffButt,startEzGame],
+            [hardDiffButt,startHardGame],
+            [settingBackButt,goBackToMenuSet],
+            [recordButtonRestart,showRecordBoardRestart]
+            ];
+        
+        (function setupUI(){
+            uiNew.setCurrentObj(ui);
+            uiDiffBoard.setCurrentObj(uiDiff);
+            uiSettingsNew.setCurrentObj(uiSetting);
+            uiPlayer.setCurrentObj(uiPlayerName);
+            uiRecordBoard.setCurrentObj(uiRecords);
+            newNewUi.setCurrentObj(uiRestart); // Restart !!!!    
+
+            addClicEventListner(clickEventsList); 
+        })();
+
+        (function startMainMenu(){
+            uiNew.goTo(-50, (130+50)/60 );
+        })();
+
+      
+        RAF(gameMainMenuUI)
+
+        function gameMenuSetDifficulty(){
+            uiNew.goTo(-230, uiAnimSpeed);
+            uiDiffBoard.goTo(-50, uiAnimSpeed);
+        }
+
+        function goBackToMenuDiff(){
+            uiNew.goTo(-50, uiAnimSpeed);
+            uiDiffBoard.goTo(130, uiAnimSpeed)
+        }
+
+        function showSettingMenu(){
+            uiNew.goTo(-230, uiAnimSpeed);
+            uiSettingsNew.goTo(-50, uiAnimSpeed);
+        }
+
+        function goBackToMenuRec(){
+            uiNew.goTo(-50, uiAnimSpeed);
+            uiRecordBoard.goTo(130, uiAnimSpeed)
+        }
+
+         function goBackToMenuSet(){
+            uiNew.goTo(-50, uiAnimSpeed);
+            uiSettingsNew.goTo(130, uiAnimSpeed)
+        }
+
+        function showRecordBoard(){
+            uiNew.goTo(-230, uiAnimSpeed);
+            uiRecordBoard.goTo(-50, uiAnimSpeed)
+        }
+
+        function showRecordBoardRestart(){ // СДЕЛАТЬ КНОПКУ РЕСТАРТА РЕКОРДОВ
+            newNewUi.goTo(130, uiAnimSpeed);
+            uiRecordBoard.goTo(-50, uiAnimSpeed);
+        }
+
+        function acceptPlayerName(){
+            currentPlayerName = nameInput.value;
+            playerNameHeading.innerHTML = "Добро пожаловвать, "+ currentPlayerName;
+            RAF(gameMenu);
+        }
+
+        function gameMenuRestart(){
+            newNewUi.goTo(-50, uiAnimSpeed);
+        }
+
+        function startEzGame(){
+            // uiDiffBoard.goTo(-230, uiAnimSpeed);
+            uiDiffBoard.currentObj.style.display="none"; // Временно
+            gameStart();
+            
+        }
+
+        function startHardGame(){
+            uiDiffBoard.currentObj.style.display="none";
+            gameStart();
+        }
+
+        function gameMainMenuUI(){
+
+            uiNew.update();
+            newNewUi.update(); // рестарт
+            uiDiffBoard.update();
+            uiSettingsNew.update();
+            uiPlayer.update();
+            uiRecordBoard.update();
+
+            if(gameIsStarted === false ){
+            RAF(gameMainMenuUI)}
+        }
+        
+        function gameStart(){ // СТАРТ ИГРЫ
+
+            console.log(bgNew)
+
+            pipenew = new Pipe();
+
+            mainField.appendChild(pipenew.createDiv('pipe'));
+            mainField.appendChild(pipenew.createDivBot('pipeBot'));
+            mainField.appendChild(bird.createBird('bird'));
+            mainField.appendChild(bgNew.createImg("bgg"));
+            mainField.appendChild(score.createDiv("score"));
+
+            var ostatokForBg;
+
+            bgDiv[0].onload = function(){
+                ostatokForBg = bgDiv[0].naturalWidth;
+                // return ostatokForBg;
+        }
+
+            console.log(ostatokForBg)
+
+                score.tick =3/60;
+                bgNew.setPositionX(0);
+                // uiNew.setCurrentObj(ui);
+                pipes.push(pipenew);
+                bgArr.push(bgNew);
+
+                pipenew.update();
+                bird.update();
+                bgNew.update();
+            
+                addEventListener("click", keyPressed, false);
+                addEventListener("touchstart", keyPressed, false);
+                startButton.removeEventListener("click",gameStart,false);
+
+                gameIsStarted = true;
+
+                RAF(game);
+            }
+
+        // gameStart();
+
+        function game() {
+
+            frame++;
+
+            document.getElementsByClassName("score")[0].innerHTML = Math.floor(score.total);
+            score.update();
+            
+            bird.update();
+            birdDiv[0].style.top = bird.y + "px";
+
+            if(frame%4==0){
+                // console.log(birdFrameNow)
+
+                birdDiv[0].style.backgroundPositionX = birdFrameParams[birdFrameNow][0] +"%"
+                birdDiv[0].style.backgroundPositionY = birdFrameParams[birdFrameNow][1] +"%"
+
+                if(birdFrameNow == 13){
+                    birdFrameNow = 0
+                }
+
+                else{
+                    birdFrameNow ++;
+                }
+            }
+           
+            // if(uiNew.currentPos<=-50){
+            //     console.log(uiNew.speed)
+            //     uiNew.CurrentObj = -50;
+            //     uiNew.speed = 0;
+            //     startButton.addEventListener("click",gameStart,false);
+            // }
+
+            uiNew.update();
+
+            for (var i = bgArr.length - 1; i >= 0; i--) {
+
+                bgArr[i].update();
+
+                bgDiv[i].style.left = bgArr[i].x +"px"
+
+                if (bgArr[0].x <= - bgArr[0].w) { // убираем фоновый див
+                    bgArr.splice(i, 1)
+                    mainField.removeChild(bgDiv[0]);
+                }
+            }
+
+            if (bgArr[0].x <= 0 && bgArr.length<=1) { // добавляем фоновый див
+                bgArr.push(new Bg());
+                bgNew.speed = vMin/280;
+                mainField.appendChild(bgArr[bgArr.length - 1].createImg("bgg"));
+                console.log("Created")
+            }
+
+
+            for (var i = pipes.length - 1; i >= 0; i--) {
+
+                pipes[i].update();
+
+                pipeDiv[i].style.left = pipes[i].x + "px"; // animation 
+                pipeDivBot[i].style.left = pipes[i].x + "px";
+
+                if (pipes[i].hits(bird)) {
+
+                    score.tick = 0;
+                    score.update();
+                    frame = 0;                    
+
+                    removeEventListener("click", keyPressed, false);
+                    removeEventListener("touchstart", keyPressed, false);
+    
+                    for (var j = 0; j <= pipes.length - 1; j++) {
+                        pipes[j].speed = 0
+                        bird.velocity = 0;
+                        bird.gravity = 0;
+                    }
+
+                    for (var j = 0; j <= bgArr.length - 1; j++) {
+                        bgArr[j].speed = 0
+                    }
+                    // RAF(gameMenuRestart);
+                    // i = -1
+                }
+
+                if (pipes[0].x <= - pipes[0].w) { // убираем пару труб
+                    pipes.splice(i, 1)
+                    mainField.removeChild(pipeDiv[0]);
+                    mainField.removeChild(pipeDivBot[0]);
+                }
+            }
+
+            if (frame % 120 == 0 && pipes[0].speed>0) { // создаем 1 пару труб каждые 120 кадров
+                pipes.push(new Pipe());
+                mainField.appendChild(pipes[pipes.length - 1].createDivBot('pipeBot'));
+                mainField.appendChild(pipes[pipes.length - 1].createDiv('pipe'));
+            }
+
+            (function gameProcess(){
+                // var gameContinue = true;
+                for (var i = pipes.length - 1; i >= 0; i--){
+                    if (pipes[i].highlight===true){
+                        gameIsStarted = false;
+                    }
+                }
+                if(gameIsStarted === false)  {
+                    RAF(gameMainMenuUI);
+                    gameMenuRestart();
+                }
+                if(gameIsStarted === true)   {RAF(game);}
+            })();
+        } 
+
+        window.addEventListener("resize",function(){
+            mainField.style.width= document.documentElement.clientWidth+"px";
+            mainField.style.height= document.documentElement.clientHeight+"px";
+        })
+
+        // gameStart(); // СТАРТ ИГРЫ
+
+        function keyPressed(EO) {
+            EO = EO || window.event;
+
+                bird.up();
+
+        }
+
+        function randomDiap(n, m) {
+            return Math.floor(Math.random() * ( m - n + 1)) + n;
+        }
+        
+        function gameRestart(){
+
+            uiRestart.style.transition = "0.1s"
+            newNewUi.currentPos = newNewUi.currentPosMax
+
+            score.tick =3/60;
+            score.total = 0;
+
+            var pipeArrayLength = pipeDiv.length;
+            var bgArrayLength = bgArr.length;
+
+                for (var i = 0; i < pipeArrayLength; i++){
+                    mainField.removeChild(pipeDiv[0]);
+                    mainField.removeChild(pipeDivBot[0]);
+                }
+
+                for (var i = 0; i < bgArrayLength; i++){
+                    mainField.removeChild(bgDiv[0]);
+                }
+
+                mainField.removeChild(scoreDiv[0]); 
+
+            mainField.removeChild(birdDiv[0])
+
+            console.log(pipeDiv.length)
+
+            pipenew = new Pipe();
+            bird = new Bird();
+
+            pipes = [];
+            bgArr = [];
+
+            // mainField.appendChild(pipenew.createDiv('pipe'));
+            // mainField.appendChild(pipenew.createDivBot('pipeBot'));
+            // mainField.appendChild(bird.createBird('bird'));
+            // mainField.appendChild(bgNew.createImg("bgg"));
+            // mainField.appendChild(score.createDiv("score"));
+
+            gameStart();
+            // restartButton.removeEventListener("click",gameRestart,false);
+        }
+
+        document.addEventListener('touchstart', handleTouchStart, false);        
+        document.addEventListener('touchmove', handleTouchMove, false);
+
+        var xDown = null;                                                        
+        var yDown = null;                                                        
+
+        function handleTouchStart(evt) {                                         
+            xDown = evt.touches[0].clientX;                                      
+            yDown = evt.touches[0].clientY;                                      
+        };                                                
+
+        function handleTouchMove(evt) {
+            if ( ! xDown || ! yDown ) {
+                return;
+            }
+
+            var xUp = evt.touches[0].clientX;                                    
+            var yUp = evt.touches[0].clientY;
+
+            var xDiff = xDown - xUp;
+            var yDiff = yDown - yUp;
+
+            if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+                if ( xDiff > 0 ) {
+                    alert("SS")
+                } else {
+                    alert("SS")
+                }                       
+            } else {
+                if ( yDiff > 0 ) {
+                    alert("SS")
+                } else { 
+                    alert("SS")
+                }                                                                 
+            }
+            /* reset values */
+            xDown = null;
+            yDown = null;                                             
+        };
+
+        // schet = {
+        //     1:"q",2:"w",3:"r",4:"t"
+        // }
+
+        // for(var nums in schet){
+        //     console.log(schet[nums])
+        // }
+
+    </script>
 </body>
 
 </html>
