@@ -3,17 +3,22 @@ function Bg (){
     this.w =  document.documentElement.clientWidth;
     this.h = document.documentElement.clientHeight;
 
-    this.x = this.w
-    this.speed = vMin/280 ;
+    this.x = width
+    // this.speed = vMin/280 ;
 
-    this.bgImg = "bg1.jpg" 
+    this.speed = 0.4;
+    this.currPos = 75;
+
+    this.bgImg = "bg.png" 
 
     this.setPositionX = function(n){
          this.x = n 
+
     }
 
     this.update = function(){
-        this.x -= this.speed 
+        // this.x -= this.speed 
+        this.currPos -= this.speed 
     }
 
     this.createImg = function(className){

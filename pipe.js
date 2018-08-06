@@ -12,7 +12,11 @@ function Pipe(){
 
     this.hBot = (height - this.bottom);
 
-    this.speed = vMin/250;
+    // this.speed = 5;
+
+    this.speed = 3.4;
+
+    this.currPos = 0;
 
     this.highlight = false;
 
@@ -30,7 +34,10 @@ function Pipe(){
     }
 
     this.update = function(){
-        this.x -= this.speed;
+        // this.x -= this.speed;
+        this.currPos -= this.speed;
+        console.log();
+
         }
 
     this.createDiv = function(className){
