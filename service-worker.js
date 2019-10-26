@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sigmatrade/precache-manifest.bdae5af054d19b6b7f9de50be53310d7.js"
+  "/sigmatrade/precache-manifest.95fb8eb5d2e0e103cb5d06f0e07c2acc.js"
 );
 
 self.addEventListener('message', (event) => {
